@@ -1,52 +1,123 @@
-# CodeSync – Real-Time Code Editor
+# 🚀 CodeSync – Real-Time Collaborative Code Editor
+---
 
-[![Stars](https://img.shields.io/github/stars/ranvijay-kumar4/CodeSync-Real-Time-Code-Editor?style=social)](https://github.com/ranvijay-kumar4/CodeSync-Real-Time-Code-Editor/stargazers)
-[![Forks](https://img.shields.io/github/forks/ranvijay-kumar4/CodeSync-Real-Time-Code-Editor?style=social)](https://github.com/ranvijay-kumar4/CodeSync-Real-Time-Code-Editor/network)
-
-**Live Demo:** [Access CodeSync Live →](https://real-time-code-editor-2-1h4l.onrender.com) :contentReference[oaicite:0]{index=0}
+## 📖 Overview
+**CodeSync** is a **real-time collaborative code editor** that allows multiple users to edit code simultaneously within a shared room. It leverages **WebSockets (Socket.IO)** for instant synchronization and **CodeMirror** for syntax highlighting, providing a seamless pair-programming and collaborative development experience.
 
 ---
 
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Screenshots (Coming Soon)](#screenshots)
-- [Contribution](#contribution)
-- [License](#license)
-- [About Me](#about-me)
+## 📸 Screenshots
+
+### 🏠 Homepage / Room Creation
+![Homepage Screenshot](<img width="1918" height="835" alt="image" src="https://github.com/user-attachments/assets/bb84ce6c-f856-40f8-af3d-9950d1c1fa12" />)  
+*Users can create or join a coding room with a unique ID.*
+
+### 👨‍💻 Real-Time Editor
+![Editor Screenshot](<img width="1919" height="835" alt="image" src="https://github.com/user-attachments/assets/22e136e2-ec81-483c-bd5d-63c72aa8ee2f" />)  
+*Collaborative editor with syntax highlighting and live synchronization.*
+
+### 👥 Multi-User Collaboration
+![Multiple Users Screenshot](<img width="1919" height="844" alt="image" src="https://github.com/user-attachments/assets/873597b2-324a-4bd3-a036-21cf3fe91d91" />)  
+*Multiple participants coding together in real-time.*
 
 ---
 
-## Overview
-**CodeSync** is a collaborative code editor enabling **real-time synchronized editing**, **live cursor tracking**, and **syntax-aware highlighting**. Built with React.js and Socket.IO, it delivers a seamless co-coding experience akin to pair programming — but better. :contentReference[oaicite:1]{index=1}
+## ✨ Features
+- 📝 **Real-time synchronization** of code across multiple clients  
+- 👥 **Room-based collaboration** using unique IDs  
+- 🎨 **Syntax highlighting** for multiple programming languages  
+- 🖱 **Live cursor movement tracking**  
+- 📱 **Responsive UI** with Tailwind CSS  
 
 ---
 
-## Features
-- Real-time editing with synchronization across users
-- Live cursor movement visualization for all collaborators
-- Syntax-aware highlighting via **CodeMirror**
-- Smart file-saving capabilities
-- Room-based collaboration using unique session IDs
-- (Potential to add chat or execution features in the future)
+## 🛠️ Project Flow
+
+The working of **CodeSync** can be understood in three main steps:
+
+1. **Room Creation / Joining**  
+   - A user can create a new room or join an existing one using a unique Room ID.  
+   - This Room ID ensures that only participants with the same ID are synchronized.
+
+2. **Real-Time Collaboration**  
+   - When one user types, **Socket.IO** broadcasts the changes to all other users in the same room.  
+   - Cursor positions and code updates are instantly reflected in every participant’s editor.  
+
+3. **Code Editing Interface**  
+   - The frontend uses **CodeMirror** for the editor, providing syntax-aware highlighting.  
+   - The UI is kept clean and responsive with **Tailwind CSS** for smooth collaboration.  
 
 ---
 
-## Tech Stack
-| Layer        | Technologies                                   |
-|--------------|------------------------------------------------|
-| Frontend     | React.js, CodeMirror, Tailwind CSS             |
-| Backend      | Node.js, Express.js, Socket.IO                 |
-| API (optional)| Piston API (for code execution)—suggested | :contentReference[oaicite:2]{index=2}
+
+## 📂 System Architecture
+                ┌──────────────┐
+                │   React.js    │
+                │  + CodeMirror │
+                └───────┬──────┘
+                        │
+     ┌──────────────────┼──────────────────┐
+     │                  │                  │
+   Socket.io          REST API         WebSocket
+ (Code Sync)        (Compile)          (Broadcast)
+     │                  │                  │
+ ┌───▼───┐       ┌─────▼─────┐       ┌────▼─────┐
+ │Socket │       │ Express.js │       │ Piston   │
+ │Server │       │  Backend   │       │  API     │
+ └───▲───┘       └─────┬─────┘       └──────────┘
+     │                 │
+   Updates        Execution Req
+     │                 │
+ ┌───▼─────────────────▼───┐
+ │       Multiple Users     │
+ │ (Real-time Collaboration)│
+ └──────────────────────────┘
 
 ---
 
-## Getting Started
 
-### Prerequisites
-- Node.js (v14+)
-- npm
-- Optional: Docker (if you choose to dockerize later)
+## 📂 File Structure
 
+CodeSync-Real-Time-Code-Editor/
+│
+├── frontend/ # React.js frontend
+│ ├── public/ # Static assets (favicon, index.html, etc.)
+│ └── src/
+│ ├── components/ # Reusable components (Editor, RoomJoin, Navbar, etc.)
+│ ├── pages/ # Page-level components (HomePage, EditorPage, etc.)
+│ ├── utils/ # Helper functions and constants
+│ ├── App.js # Root React component
+│ └── index.js # Entry point for React app
+│
+├── backend/ # Node.js + Express + Socket.IO backend
+│ ├── server.js # Main server file, handles Socket.IO connections
+│ ├── socket/ # Socket.IO event handling logic
+│ ├── utils/ # Utility functions (room management, etc.)
+│ └── package.json # Backend dependencies
+│
+├── screenshots/ # Project screenshots for README
+│
+├── LICENSE # License file
+└── README.md # Project documentation
+
+
+---
+
+## 🔮 Future Enhancements
+- Code execution using **Piston API**  
+- Persistent code storage (MongoDB/Redis)  
+- Authentication & user roles  
+- Built-in chat for communication  
+
+---
+
+## 👨‍💻 About Me
+Hi! I’m **Ranvijay Kumar Upadhyay**, an IT engineering student passionate about **real-time systems, full-stack development, and problem-solving**.  
+
+- 🔗 [Portfolio](https://ranvijay-portfolio.vercel.app/)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/ranvijay-kumar4/)  
+- 📂 [GitHub](https://github.com/ranvijay-kumar4)  
+
+---
+
+⭐ If you found this project interesting, please **star the repository**!
