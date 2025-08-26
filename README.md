@@ -106,6 +106,8 @@ CodeSync-Real-Time-Code-Editor/
 ├── LICENSE                       # License file (MIT)
 └── README.md                     # Project documentation
 
+```
+
 ---
 
 ## 🔮 Future Enhancements
@@ -114,7 +116,6 @@ CodeSync-Real-Time-Code-Editor/
 - Authentication & user roles  
 - Built-in chat for communication  
 
-```
 ---
 
 ## 👨‍💻 About Me
