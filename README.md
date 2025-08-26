@@ -75,8 +75,8 @@ The working of **CodeSync** can be understood in three main steps:
  │ (Real-time Collaboration)│
  └──────────────────────────┘
 
----
 ```
+---
 
 ## 📂 File Structure
 
