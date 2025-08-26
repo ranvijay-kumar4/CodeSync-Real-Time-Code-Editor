@@ -76,10 +76,11 @@ The working of **CodeSync** can be understood in three main steps:
  └──────────────────────────┘
 
 ---
-
+```
 
 ## 📂 File Structure
 
+```text
 CodeSync-Real-Time-Code-Editor/
 │
 ├── frontend/                     # React.js frontend
@@ -113,9 +114,11 @@ CodeSync-Real-Time-Code-Editor/
 - Authentication & user roles  
 - Built-in chat for communication  
 
+```
 ---
 
 ## 👨‍💻 About Me
+
 Hi! I’m **Ranvijay Kumar Upadhyay**, an IT engineering student passionate about **real-time systems, full-stack development, and problem-solving**.  
 
 - 🔗 [Portfolio](https://ranvijay-portfolio.vercel.app/)  
