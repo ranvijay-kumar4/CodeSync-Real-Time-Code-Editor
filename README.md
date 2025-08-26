@@ -9,15 +9,15 @@
 ## 📸 Screenshots
 
 ### 🏠 Homepage / Room Creation
-![Homepage Screenshot](<img width="1918" height="835" alt="image" src="https://github.com/user-attachments/assets/bb84ce6c-f856-40f8-af3d-9950d1c1fa12" />)  
+![Homepage Screenshot](https://github.com/user-attachments/assets/bb84ce6c-f856-40f8-af3d-9950d1c1fa12) 
 *Users can create or join a coding room with a unique ID.*
 
 ### 👨‍💻 Real-Time Editor
-![Editor Screenshot](<img width="1919" height="835" alt="image" src="https://github.com/user-attachments/assets/22e136e2-ec81-483c-bd5d-63c72aa8ee2f" />)  
+![Editor Screenshot](https://github.com/user-attachments/assets/22e136e2-ec81-483c-bd5d-63c72aa8ee2f)  
 *Collaborative editor with syntax highlighting and live synchronization.*
 
 ### 👥 Multi-User Collaboration
-![Multiple Users Screenshot](<img width="1919" height="844" alt="image" src="https://github.com/user-attachments/assets/873597b2-324a-4bd3-a036-21cf3fe91d91" />)  
+![Multiple Users Screenshot](https://github.com/user-attachments/assets/873597b2-324a-4bd3-a036-21cf3fe91d91)  
 *Multiple participants coding together in real-time.*
 
 ---
