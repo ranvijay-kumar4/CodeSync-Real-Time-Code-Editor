@@ -51,6 +51,8 @@ The working of **CodeSync** can be understood in three main steps:
 
 
 ## 📂 System Architecture
+
+```text
                 ┌──────────────┐
                 │   React.js    │
                 │  + CodeMirror │
@@ -80,26 +82,28 @@ The working of **CodeSync** can be understood in three main steps:
 
 CodeSync-Real-Time-Code-Editor/
 │
-├── frontend/ # React.js frontend
-│ ├── public/ # Static assets (favicon, index.html, etc.)
-│ └── src/
-│ ├── components/ # Reusable components (Editor, RoomJoin, Navbar, etc.)
-│ ├── pages/ # Page-level components (HomePage, EditorPage, etc.)
-│ ├── utils/ # Helper functions and constants
-│ ├── App.js # Root React component
-│ └── index.js # Entry point for React app
+├── frontend/                     # React.js frontend
+│   ├── public/                   # Static files (index.html, favicon, etc.)
+│   └── src/
+│       ├── components/           # Reusable UI components (Editor, Navbar, RoomJoin, etc.)
+│       ├── pages/                # Page-level components (HomePage, EditorPage, etc.)
+│       ├── utils/                # Helper functions and constants
+│       ├── App.js                # Main app component
+│       └── index.js              # Entry point for React app
 │
-├── backend/ # Node.js + Express + Socket.IO backend
-│ ├── server.js # Main server file, handles Socket.IO connections
-│ ├── socket/ # Socket.IO event handling logic
-│ ├── utils/ # Utility functions (room management, etc.)
-│ └── package.json # Backend dependencies
+├── backend/                      # Node.js + Express + Socket.IO backend
+│   ├── server.js                 # Main server file, initializes Express and Socket.IO
+│   ├── socket/                   # Socket.IO event handling (room join, code sync, cursor updates)
+│   ├── utils/                    # Utility functions (room management, broadcasting, etc.)
+│   └── package.json              # Backend dependencies
 │
-├── screenshots/ # Project screenshots for README
+├── screenshots/                  # Screenshots used in README
+│   ├── home.png
+│   ├── editor.png
+│   └── multi-users.png
 │
-├── LICENSE # License file
-└── README.md # Project documentation
-
+├── LICENSE                       # License file (MIT)
+└── README.md                     # Project documentation
 
 ---
 
@@ -117,7 +121,6 @@ Hi! I’m **Ranvijay Kumar Upadhyay**, an IT engineering student passionate abou
 - 🔗 [Portfolio](https://ranvijay-portfolio.vercel.app/)  
 - 💼 [LinkedIn](https://www.linkedin.com/in/ranvijay-kumar4/)  
 - 📂 [GitHub](https://github.com/ranvijay-kumar4)  
-
 ---
 
 ⭐ If you found this project interesting, please **star the repository**!
